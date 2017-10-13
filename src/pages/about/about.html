@@ -1,0 +1,105 @@
+<ion-content padding>
+ <ion-card>
+    <ion-header>
+      <ion-navbar>
+        <ion-buttons start>
+          <button ion-button (click)="goToMapPage()" icon-only>
+            <ion-icon name= "globe"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-title>
+          What's Nearby
+        </ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only>
+                <ion-icon name= "settings"></ion-icon>
+              </button>
+        </ion-buttons>
+      </ion-navbar>
+    </ion-header>
+      
+        <ion-list>
+          <ion-item>
+            <button ion-button  icon-only>
+              <ion-icon name= "aperture"></ion-icon>
+            </button>
+            Camera
+          </ion-item>
+
+          <ion-item>
+              <button ion-button  icon-only>
+                <ion-icon name= "beer"></ion-icon>
+              </button>
+              Happy Hour
+            </ion-item>
+
+            <ion-item>
+                
+                <button ion-button  icon-only>
+                  <ion-icon name= "car"></ion-icon>
+                </button>
+                Uber
+              </ion-item>
+        </ion-list>
+ </ion-card>
+
+ <ion-card>
+    <ion-card-header>
+      Current Location
+    </ion-card-header>
+    <ion-item>
+       <ion-icon ></ion-icon>
+       Geolocation
+       <ion-badge item-end>{{onCurrentLocation}}</ion-badge>
+    </ion-item>
+
+    <ion-item>
+       <ion-icon></ion-icon>
+       Latitude
+       <ion-badge item-end>{{latitude}}</ion-badge>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-icon></ion-icon>
+      Longitude
+      <ion-badge item-end>{{longitude}}</ion-badge>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-icon></ion-icon>
+      Speed
+      <ion-badge item-end>{{speed}}</ion-badge>
+    </ion-item>
+
+    <ion-item>
+        <ion-icon></ion-icon>
+        Accuracy
+        <ion-badge item-end>{{accuracy}}</ion-badge>
+    </ion-item>
+ 
+  </ion-card>
+
+ <ion-card>
+   <ion-card-header>
+     Social Media Stats
+   </ion-card-header>
+    <ion-item>
+      <ion-icon name="logo-twitter" item-start></ion-icon>
+      Followers
+      <ion-badge item-end>300k</ion-badge>
+    </ion-item>
+
+    <ion-item>
+        <ion-icon name="logo-youtube" item-start></ion-icon>
+        Subscribers
+        <ion-badge item-end>1.2m</ion-badge>
+    </ion-item>
+
+    <ion-item>
+          <ion-icon name="logo-facebook" item-start></ion-icon>
+          Friends
+          <ion-badge item-end>25k</ion-badge>
+    </ion-item>
+ </ion-card>
+</ion-content>
