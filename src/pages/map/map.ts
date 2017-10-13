@@ -22,26 +22,26 @@ export class MapPage {
     this.loadMap();
   }
 loadMap(){
-  var currentLocation = (this.latitude, this.longitude); //used var instead of let
+  let currentLocation = (this.latitude, this.longitude); 
 
-  var mapOptions = { //used var instead of let
+  let mapOptions = { //used var instead of let
     zoom: 12,
     center: currentLocation,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   }
-  var map = new google.maps.Map(document.getElementById('map'),mapOptions); //used var instead of let
+  let map = new google.maps.Map(document.getElementById('map'),mapOptions);
 
-  var marker = new google.maps.Marker({ //used var instead of let
+  let marker = new google.maps.Marker({ 
     position: currentLocation,
     map: map
   });
 
-  var geocoder = new google.maps.Geocoder(); //used var instead of let
+  let geocoder = new google.maps.Geocoder(); 
   geocoder.geocode('address',function(results,status){
     if (status == google.maps.GeocoderStatus.OK) {
       if (results[0]){
         this.address = results[0].formatted_address;
-        var infoWindow = new google.maps.InfoWindow({ //used var instead of let
+        let infoWindow = new google.maps.InfoWindow({ 
           content: this.address
         })
 
